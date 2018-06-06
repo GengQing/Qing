@@ -12,3 +12,20 @@ Spring 启动时可设置参数，如修改配置文件`application.properties`�
 
 在测试中可清理测试缓存，如清理内存数据库中的表，清理单例模式的类，使其回到初始状态。
 
+* `Spring boot dependencies`
+
+在maven配置文件中如下引入`Spring boot`的依赖
+```xml
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-dependencies</artifactId>
+    <version>${spring.boot.version}</version>
+    <type>pom</type>
+    <scope>import</scope>
+</dependency>
+```
+
+子模块可以引入父模块的依赖包而不需要`spring-boot-starter-parent`。
+
+
+
