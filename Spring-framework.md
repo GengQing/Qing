@@ -29,3 +29,16 @@ Spring 启动时可设置参数，如修改配置文件`application.properties`�
 
 
 
+*  ComponentScan
+
+会扫描其所在的包下的bean,  TestPropertySource 默认是找到其目录下app.properties,
+
+```java
+properties = {"detectAndCreateTrip.delaySeconds=120"}
+```
+
+```java
+@ContextConfiguration(classes = DelayCreateTripConsumerTest.Config.class)
+```
+
+类似对应的类，类似配置文件
